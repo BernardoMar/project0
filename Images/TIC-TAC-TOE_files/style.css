@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Fredoka+One&family=Rampart+One&display=swap');
+
+body {
+  background-color: #6689A1;
+  margin: 0;
+  padding: 0
+}
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 60px;
+  color: #6689A1;
+
+
+}
+
+.container {
+
+  margin: 25px auto;
+  height: 100%;
+  max-width: 900px;
+  background-color: #CBD4C2;
+  text-align: center;
+  padding: 30px;
+  border-radius: 115px;
+}
+
+.board {
+  background-image: url('https://i.gifer.com/NKTe.gif');
+  max-width: 70%;
+  margin: 80px auto;
+  border-radius: 15px;
+  width: 500px;
+
+
+}
+
+button {
+    background-color: #FF6392;
+    color: #F6F740;
+    border: #4CAF50;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 15px;
+    height: 124px;
+    width: 124px;
+    font-size: 90px;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 2px 2px #6689A1;
+    border-radius: 8px;
+}
+
+
+button:hover {
+  background-color: #6689A1;
+}
