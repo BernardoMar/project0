@@ -3,7 +3,7 @@ let winingOption;
 let player = 1;
 let playerOneScore = 0 ;
 let playerTwoScore = 0 ;
-
+let playerTurn = 'Player 1';
 
 
 
@@ -14,14 +14,16 @@ const game = function () {
   for (let i=0 ; i < winingOption.length ; i++) {
     if (winingOption[i][0].text() === 'X' &&          winingOption[i][1].text() === 'X' &&
     winingOption[i][2].text() === 'X') {
-    alert("X Wins")
+    alert(`${$('#player-one-name').val()} wins.`)
     playerOneScore = playerOneScore + 1;
+    $('#points-one').addClass('player-ready')
     $('#points-one').text(`${playerOneScore}`); //Updates players score
     $('button').text(''); //restarts the game
   } else if (winingOption[i][0].text() === 'O' &&          winingOption[i][1].text() === 'O' &&
   winingOption[i][2].text() === 'O') {
-    alert("O Wins")
+    alert(`${$('#player-two-name').val()} wins.`)
     playerTwoScore = playerTwoScore + 1;
+    $('#points-two').addClass('player-ready')
     $('#points-two').text(`${playerTwoScore}`);
     $('button').text(''); //restarts the game
     };
@@ -62,6 +64,7 @@ $(document).ready (function (){
   //Fun text editor plugin for H1
   $('h1').funText(33, ['#F6F740', '#D8DC6A', '#6689A1']);
 
+  
 
   // Prints X when clicked on a button
   $('button').on('click' , function() {
@@ -70,9 +73,11 @@ $(document).ready (function (){
     } else if (player == 1) {
       $(this).text('X')
       player = 2; //this changes the player turn
+      $('.turn-is').text(`${$('#player-two-name').val()}`)
     } else if (player == 2) {
       $(this).text('O')
       player = 1; //changes player turn
+      $('.turn-is').text(`${$('#player-one-name').val()}`)
     };
     game();
     reStart();
@@ -82,10 +87,13 @@ $(document).ready (function (){
   $('#insert-one-name').on('click' , function () {
     $('#player-one').text(`${$('#player-one-name').val()}'s score:`);
     $('#insert-one-name').hide();
+    $('#player-one-name').hide();
+    $('.turn-is').text(`${$('#player-one-name').val()}`)
   })
   $('#insert-two-name').on('click' , function () {
     $('#player-two').text(`${$('#player-two-name').val()}'s score:`);
     $('#insert-two-name').hide();
+    $('#player-two-name').hide();
   })
 
 });
