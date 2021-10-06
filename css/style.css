@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rampart+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Fredoka+One&family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Staatliches&display=swap');
 
 body {
   background-color: #6689A1;
@@ -20,7 +22,7 @@ h1 {
 
   margin: 25px auto;
   height: 100%;
-  max-width: 900px;
+  max-width: 755px;
   background-color: #CBD4C2;
   text-align: center;
   padding: 30px;
@@ -33,9 +35,70 @@ h1 {
   margin: 80px auto;
   border-radius: 15px;
   width: 500px;
+}
 
+.side-board {
+  background-color: #e5e4e2;
+  display: inline-block;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  height: 713px;
+  width: 185px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-family: 'Staatliches', cursive;
+  color: #FF6392;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.side-box {
+  background-image: url('https://64.media.tumblr.com/c2b1cd2b78e043fb3402b6c37d5310ec/tumblr_pikl67QvIU1sb5osho1_540.gifv');
+  min-height: 85px;
+  min-width: 85px;
+  margin: auto;
+  color: #F6F740;
+  font-size: 73px;
+  font-family: 'Bungee Shade', cursive;
 
 }
+
+input {
+  background-color: #6689a1;
+  color: white;
+  width: 90px;
+  margin: 5px auto;
+  font-family: 'Quicksand', sans-serif;
+  border: none;
+  box-shadow: 2px 2px 7px grey;
+  ;
+}
+
+#player-one-name, #player-two-name {
+  background-color: white;
+  width: 143px;
+  border: 2px solid #F6F740;
+  color: #D8DC6A;
+  font-size: 13px;
+  box-shadow: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  margin: 10px auto;
+  color: #FF6392;
+  font-size: 15px;
+}
+
+.side-board:hover {
+  width: 300px;
+  padding: 25px;
+}
+
+
 
 button {
     background-color: #FF6392;

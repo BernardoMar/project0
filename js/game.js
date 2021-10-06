@@ -1,24 +1,54 @@
 //Winning options
 let winingOption;
 let player = 1;
+let playerOneScore = 0 ;
+let playerTwoScore = 0 ;
 
 
-// Checks whether a line has Xs.
-const trial = function () {
+
+
+
+
+// Checks if any of the winning arrays if full of 'x' or 'o'
+const game = function () {
   for (let i=0 ; i < winingOption.length ; i++) {
     if (winingOption[i][0].text() === 'X' &&          winingOption[i][1].text() === 'X' &&
     winingOption[i][2].text() === 'X') {
-    alert("X Wins and Bernie is amazing")
-    $('button').text('');
+    alert("X Wins")
+    playerOneScore = playerOneScore + 1;
+    $('#points-one').text(`${playerOneScore}`); //Updates players score
+    $('button').text(''); //restarts the game
   } else if (winingOption[i][0].text() === 'O' &&          winingOption[i][1].text() === 'O' &&
   winingOption[i][2].text() === 'O') {
-    alert("O Wins and Bernie is amazing")
-    $('button').text('');
+    alert("O Wins")
+    playerTwoScore = playerTwoScore + 1;
+    $('#points-two').text(`${playerTwoScore}`);
+    $('button').text(''); //restarts the game
+    };
   };
 };
+
+
+
+// This fuction is for when all buttons have been clicked and no one has won - alerts and resets all buttons
+const reStart = function () {
+  if ($('#a-one').text().length === 1 &&
+      $('#a-two').text().length === 1 &&
+      $('#a-three').text().length === 1 &&
+      $('#b-one').text().length === 1 &&
+      $('#b-two').text().length === 1 &&
+      $('#b-three').text().length === 1 &&
+      $('#c-one').text().length === 1 &&
+      $('#c-two').text().length === 1 &&
+      $('#c-three').text().length === 1 ) {
+        alert(`No one wins. Try again.`);
+        $('button').text('');
+      };
 };
 
 $(document).ready (function (){
+
+// Array of winning options
  winingOption = [
     [$('#a-one'), $('#a-two'),$('#a-three')],
     [$('#b-one'),$('#b-two'),$('#b-three')],
@@ -29,21 +59,33 @@ $(document).ready (function (){
     [$('#a-one'),$('#b-two'),$('#c-three')],
     [$('#a-three'),$('#b-two'),$('#c-one')]
   ];
-  //Fun text editor plugin
+  //Fun text editor plugin for H1
   $('h1').funText(33, ['#F6F740', '#D8DC6A', '#6689A1']);
 
 
   // Prints X when clicked on a button
-  $('button').on('click' , function(){
-    if (player == 1) {
+  $('button').on('click' , function() {
+    if ($(this).text().length === 1) {
+      $(this).off('click'); // if there is a value in the button, this disables the click
+    } else if (player == 1) {
       $(this).text('X')
-      player = 2;
+      player = 2; //this changes the player turn
     } else if (player == 2) {
       $(this).text('O')
-      player = 1;
+      player = 1; //changes player turn
     };
-
-    trial();
+    game();
+    reStart();
   });
+
+  //Gets Player 1 name
+  $('#insert-one-name').on('click' , function () {
+    $('#player-one').text(`${$('#player-one-name').val()}'s score:`);
+    $('#insert-one-name').hide();
+  })
+  $('#insert-two-name').on('click' , function () {
+    $('#player-two').text(`${$('#player-two-name').val()}'s score:`);
+    $('#insert-two-name').hide();
+  })
 
 });
