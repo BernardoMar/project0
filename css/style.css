@@ -30,8 +30,9 @@ h1 {
 }
 
 .board {
-  background-image: url('https://i.gifer.com/NKTe.gif');
-  max-width: 70%;
+  background-image: url('../Images/small-box.gif');
+  background-size: cover;
+  max-width: 63%;
   margin: 80px auto;
   border-radius: 15px;
   width: 500px;
@@ -51,17 +52,36 @@ h1 {
   color: #FF6392;
   font-size: 20px;
   padding: 10px;
+  box-shadow: 2px 2px 27px grey;
+
 }
 
 .side-box {
-  background-image: url('https://64.media.tumblr.com/c2b1cd2b78e043fb3402b6c37d5310ec/tumblr_pikl67QvIU1sb5osho1_540.gifv');
-  min-height: 85px;
-  min-width: 85px;
-  margin: auto;
+  background-image: url('../Images/space-man.gif');
+  background-size: cover;
+  height: 90px;
+  width: 105px;
+  margin: 0 auto;
+  border-radius: 8px;
   color: #F6F740;
-  font-size: 73px;
   font-family: 'Bungee Shade', cursive;
+}
 
+.player-ready {
+  background-image: url('../Images/small-box3.gif');
+  background-size: cover;
+  font-size: 73px;
+
+}
+
+#player-turn{
+  font-size: 23px;
+  line-height: 85px;
+  background-image: none;
+  background-color: #6689A1;
+  margin-bottom: 10px;
+  width: 150px;
+  border: 4px dotted #D8DC6A;
 }
 
 input {
@@ -71,8 +91,13 @@ input {
   margin: 5px auto;
   font-family: 'Quicksand', sans-serif;
   border: none;
-  box-shadow: 2px 2px 7px grey;
-  ;
+  border-radius: 4px;
+
+}
+
+input:hover {
+  background-color: #FF6392;
+
 }
 
 #player-one-name, #player-two-name {
@@ -81,8 +106,8 @@ input {
   border: 2px solid #F6F740;
   color: #D8DC6A;
   font-size: 13px;
-  box-shadow: none;
 }
+
 
 a {
   text-decoration: none;
@@ -92,13 +117,6 @@ a {
   color: #FF6392;
   font-size: 15px;
 }
-
-.side-board:hover {
-  width: 300px;
-  padding: 25px;
-}
-
-
 
 button {
     background-color: #FF6392;
