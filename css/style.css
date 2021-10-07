@@ -9,7 +9,8 @@
 body {
   background-color: #6689A1;
   margin: 0;
-  padding: 0
+  padding: 0;
+  position: relative;
 }
 
 h1 {
@@ -42,7 +43,7 @@ h1 {
   background-color: #e5e4e2;
   display: inline-block;
   position: absolute;
-  top: 74px;
+  top: 48px;
   left: 0;
   height: 661px;
   width: 185px;
@@ -53,14 +54,14 @@ h1 {
   font-size: 20px;
   padding: 10px;
   box-shadow: 2px 2px 27px grey;
-
+  text-align: center;
 }
 
 .side-box {
   background-image: url('../Images/space-man.gif');
   background-size: cover;
   height: 90px;
-  width: 105px;
+  width: 120px;
   margin: 0 auto;
   border-radius: 8px;
   color: #F6F740;
@@ -133,7 +134,7 @@ li{
   background-color: #6689A1;
   margin-bottom: 10px;
   width: 150px;
-  border: 4px dotted #D8DC6A;
+  border: 2px solid #F6F740;
 }
 
 input {
@@ -155,8 +156,8 @@ input:hover {
 #player-one-name, #player-two-name {
   background-color: white;
   width: 143px;
-  border: 2px solid #F6F740;
-  color: #D8DC6A;
+  border: 2px dotted #6689a1;
+  color: #FF6392;
   font-size: 13px;
 }
 
