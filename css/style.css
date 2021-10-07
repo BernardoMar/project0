@@ -16,12 +16,10 @@ h1 {
   font-family: 'Bungee Shade', cursive;
   font-size: 60px;
   color: #6689A1;
-
-
 }
 
 .container {
-
+  position: relative;
   margin: 25px auto;
   height: 100%;
   max-width: 755px;
@@ -90,6 +88,36 @@ li{
   margin: 5px 0px 5px -20px;
 }
 
+.winer-board {
+    position: absolute;
+    background-image: url(../Images/pickachu.gif);
+    background-size: contain;
+    width: 372px;
+    height: 174px;
+    top: 50%;
+    left: 50%;
+    margin-left: -194px;
+    margin-top: -38px;
+    font-family: 'Press Start 2P', cursive;
+    color: #F6F740;
+    padding: 10px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.tryagain-board {
+    position: absolute;
+    background-image: url(../Images/tryagain.gif);
+    background-size: cover;
+    width: 333px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-left: -177px;
+    margin-top: -97px;
+    padding: 10px;
+    border-radius: 14px;
+}
 
 .player-ready {
   background-image: url('../Images/small-box3.gif');
@@ -159,4 +187,8 @@ button {
 
 button:hover {
   background-color: #6689A1;
+}
+
+.turn {
+  margin: 0 auto;
 }

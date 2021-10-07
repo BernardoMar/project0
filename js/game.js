@@ -13,14 +13,14 @@ const game = function () {
   for (let i=0 ; i < winingOption.length ; i++) {
     if (winingOption[i][0].text() === 'X' &&          winingOption[i][1].text() === 'X' &&
     winingOption[i][2].text() === 'X') {
-    alert(`${$('#player-one-name').val()} wins.`)
+    $('.winer-board').text(`${$('#player-one-name').val()} wins`).show().fadeOut(5500);
     playerOneScore = playerOneScore + 1;
     $('#points-one').addClass('player-ready')
     $('#points-one').text(`${playerOneScore}`); //Updates players score
     $('button').text(''); //restarts the game
   } else if (winingOption[i][0].text() === 'O' &&          winingOption[i][1].text() === 'O' &&
   winingOption[i][2].text() === 'O') {
-    alert(`${$('#player-two-name').val()} wins.`)
+    $('.winer-board').text(`${$('#player-two-name').val()} wins`).show().fadeOut(5500);
     playerTwoScore = playerTwoScore + 1;
     $('#points-two').addClass('player-ready')
     $('#points-two').text(`${playerTwoScore}`);
@@ -42,7 +42,7 @@ const reStart = function () {
       $('#c-one').text().length === 1 &&
       $('#c-two').text().length === 1 &&
       $('#c-three').text().length === 1 ) {
-        alert(`No one wins. Try again.`);
+        $('.tryagain-board').show().fadeOut(5500);
         $('button').text('');
       };
 };
@@ -52,6 +52,10 @@ $(document).ready (function (){
 
 //Hide Link to other games:
   $('.other-games').hide();
+//Hide winning boards
+  $('.winer-board').hide();
+  $('.tryagain-board').hide();
+
 // Array of winning options
  winingOption = [
     [$('#a-one'), $('#a-two'),$('#a-three')],
@@ -111,6 +115,7 @@ $(document).ready (function (){
     $('#player-one').text(`Player 1 score:`);
     $('#player-two').text(`Player 2 score:`);
     $('.turn-is').text('');
+    $('button').text('');
     playerOneScore = 0 ;
     playerTwoScore = 0 ;
     $('.other-games').hide();
