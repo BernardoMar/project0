@@ -7,7 +7,7 @@ This Tic-Tac-Toe is my very first developing project! It consists on a very simp
 
 The goal of the game is to achieve a line of three elements (X or O in my version of the game) before the other contestant.
 
-There probably many features of the game that I could have improved, however I am very happy with the result and I hope you enjoy it as well!
+There're probably many features of the game that I could have improved, however I am very happy with the result and I hope you enjoy it as well!
 
 ``` javascript
     console.log(`Sugestions & ${feedbacks}`);
@@ -27,7 +27,7 @@ Besides, I used Jquery's library and [Fun Text](http://briznad.github.io/funText
 Some of the features my game version includes are:
 
 * It allows users to log their names for a customised enjoyment.
-* I keeps track of the players score.
+* It keeps track of the players score.
 * It allows players to restart the game allowing them to change their names.
 * It provides links to similar online games.
 * It displays pop up signs when a player wins and when neither wins.
