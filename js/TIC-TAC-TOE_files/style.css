@@ -4,8 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,200&family=Spartan:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,200;1,300&family=Press+Start+2P&family=Spartan:wght@100&display=swap');
-
 body {
   background-color: #6689A1;
   margin: 0;
@@ -68,28 +66,6 @@ h1 {
   color: #F6F740;
   font-family: 'Bungee Shade', cursive;
 }
-
-.other-games {
-  text-align: left;
-  margin: 38px -10px;
-  padding: 10px;
-  background-image: url('../Images/joystick.jpeg');
-  background-size: cover;
-  color: #F6F740;
-  border-bottom-right-radius: 24px;
-}
-a {
-  font-size: 16px;
-  font-family: 'Press Start 2P', cursive;
-  color: #D8DC6A;
-}
-a:hover {
-  font-size: 20px;
-}
-li{
-  margin: 5px 0px 5px -20px;
-}
-
 
 .player-ready {
   background-image: url('../Images/small-box3.gif');

@@ -8,6 +8,7 @@ let playerTurn = 'Player 1';
 
 
 
+
 // Checks if any of the winning arrays if full of 'x' or 'o'
 const game = function () {
   for (let i=0 ; i < winingOption.length ; i++) {
@@ -49,9 +50,6 @@ const reStart = function () {
 
 $(document).ready (function (){
 
-
-//Hide Link to other games:
-  $('.other-games').hide();
 // Array of winning options
  winingOption = [
     [$('#a-one'), $('#a-two'),$('#a-three')],
@@ -92,12 +90,10 @@ $(document).ready (function (){
     $('#player-one-name').hide();
     $('.turn-is').text(`${$('#player-one-name').val()}`)
   })
-  //Get Player 2 name
   $('#insert-two-name').on('click' , function () {
     $('#player-two').text(`${$('#player-two-name').val()}'s score:`);
     $('#insert-two-name').hide();
     $('#player-two-name').hide();
-    $('.other-games').fadeIn(1000);
   })
 
   //Restart game
@@ -113,7 +109,6 @@ $(document).ready (function (){
     $('.turn-is').text('');
     playerOneScore = 0 ;
     playerTwoScore = 0 ;
-    $('.other-games').hide();
   })
 
 
